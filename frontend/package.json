@@ -1,26 +1,49 @@
 {
-  "name": "frontend",
+  "name": "loyaltyroller",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "next build && next export && npx thirdweb@latest upload out"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
+    "@1inch/fusion-sdk": "^0.1.12",
+    "@airstack/airstack-react": "^0.5.9",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@etherspot/prime-sdk": "^1.3.13",
+    "@prisma/client": "^5.6.0",
+    "@thirdweb-dev/engine": "^0.0.1",
+    "@thirdweb-dev/react": "^4.1.11",
+    "@thirdweb-dev/sdk": "^4.0.18",
+    "ethers": "^5",
+    "framer-motion": "^10.16.15",
+    "next": "^13",
+    "next-qrcode": "^2.5.1",
+    "permissionless": "^0.0.13",
+    "prisma": "^5.6.0",
+    "qrcode": "^1.5.3",
+    "react": "^18.2",
+    "react-dom": "^18.2",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.12.0",
+    "viem": "^1.19.4"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@types/node": "^18.11.11",
     "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
-  }
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.29.0",
+    "eslint-config-next": "^13",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3"
+  },
+  "main": "index.js",
+  "license": "MIT"
 }

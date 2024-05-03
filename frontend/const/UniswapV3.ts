@@ -1,0 +1,2 @@
+export const polygonV3address = "0xC36442b4a4522E871399CD717aBDD847Ab11FE88"
+export const ethV3address = "0xC36442b4a4522E871399CD717aBDD847Ab11FE88"
