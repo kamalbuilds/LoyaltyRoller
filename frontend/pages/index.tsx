@@ -27,9 +27,6 @@ import { baseGoerli, polygonMumbai } from "viem/chains";
 import { BASE_GOERLI_PAYMASTER_URL } from "../lib/constants";
 import { generatePrivateKey, privateKeyToAccount, signMessage } from "viem/accounts"
 // import { SmartAccountContext } from "../context/SmartAccountContext";
-import { UserOperation, bundlerActions, getSenderAddress, signUserOperationHashWithECDSA } from "permissionless";
-import NFTAbi from "../const/NFTAbi.json";
-import { pimlicoBundlerActions, pimlicoPaymasterActions } from "permissionless/actions/pimlico";
 
 /**
  * The home page of the application.
@@ -230,7 +227,7 @@ const Home: NextPage = () => {
     <Container maxWidth="lg">
       {address ? (
         <div className={styles.container}>
-          <h1>SmartNFTs</h1>
+          <h1>LoyaltyRoller</h1>
           <p>
             Browse the NFTs inside your personal wallet, select one to connect a
             token bound smart wallet & view it&apos;s balance.
