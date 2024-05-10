@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import { useEffect } from "react";
-import ChainSelect from "../ChainSelect";
 
 /**
  * Navigation bar that shows up on all pages.
@@ -46,9 +45,6 @@ export function Navbar() {
               },
             }}
           />
-          </div>
-          <div>
-            <ChainSelect />
           </div>
         </div>
       </nav>
