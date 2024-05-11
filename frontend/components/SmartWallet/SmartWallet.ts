@@ -14,17 +14,14 @@ import { useContext } from "react";
 import ChainContext from "../../context/chainselect";
 import { getaddresses } from "../../const/constants";
 
+import { factoryAddress, implementation , addidas } from "../../const/constants";
 export default function newSmartWallet(token: NFT) {
   //Smart Wallet config object
-  const selectedChain = activeChain;
-  const factoryadd = getaddresses[selectedChain.chainId]?.factoryAddress;
-  const implementationadd = getaddresses[selectedChain.chainId]?.implementation;
-  const addidasaddress = getaddresses[selectedChain.chainId]?.addidas;
-  console.log("factoryadd", factoryadd , addidasaddress, implementationadd);
+  console.log("factoryAddress", factoryAddress , addidas, implementation);
 
   const config: WalletOptions<SmartWalletConfig> = {
-    chain: selectedChain, // the chain where your smart wallet will be or is deployed
-    factoryAddress: factoryadd, // your own deployed account factory address
+    chain: activeChain, // the chain where your smart wallet will be or is deployed
+    factoryAddress: factoryAddress, // your own deployed account factory address
     clientId: TWApiKey, // obtained from the thirdweb dashboard
     gasless: true, // enable or disable gasless transactions
     factoryInfo: {
@@ -33,9 +30,9 @@ export default function newSmartWallet(token: NFT) {
         owner: string
       ) => {
         const account = factory.prepare("createAccount", [
-          implementationadd,
-          selectedChain.chainId,
-          addidasaddress,
+          implementation,
+          activeChain.chainId,
+          addidas,
           token.metadata.id,
           0,
           ethers.utils.toUtf8Bytes("")
@@ -48,9 +45,9 @@ export default function newSmartWallet(token: NFT) {
         owner: string
       ) => {
         return factory.call("account", [
-          implementationadd,
-          selectedChain.chainId,
-          addidasaddress,
+          implementation,
+          activeChain.chainId,
+          addidas,
           token.metadata.id,
           0
         ]);

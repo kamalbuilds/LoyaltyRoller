@@ -25,7 +25,8 @@ import ChainContext from "../context/chainselect";
 import { createClient, createPublicClient, encodeFunctionData, getContract, http } from "viem";
 import { baseGoerli, polygonMumbai } from "viem/chains";
 import { BASE_GOERLI_PAYMASTER_URL } from "../lib/constants";
-import { generatePrivateKey, privateKeyToAccount, signMessage } from "viem/accounts"
+import { generatePrivateKey, privateKeyToAccount, signMessage } from "viem/accounts";
+import { addidas } from "../const/constants";
 // import { SmartAccountContext } from "../context/SmartAccountContext";
 
 /**
@@ -33,15 +34,13 @@ import { generatePrivateKey, privateKeyToAccount, signMessage } from "viem/accou
  */
 const Home: NextPage = () => {
   const address = useAddress();
-  const selectedChain = useContext(ChainContext);
   const chain = useChainId();
-  const addidas = getaddresses[selectedChain.selectedChain.chainId]?.addidas;
-  console.log(addidas , selectedChain.selectedChain.chainId);
 
   // const { createSafeAccount, getInitCode } = useContext(SmartAccountContext);
 
   // const { contract: nftDropContract } = useContract(loyaltyCardAddress, "nft-drop");
   const { contract : addidasContract } = useContract(addidas);
+  console.log(addidasContract);
   const { data: nfts, isLoading } = useOwnedNFTs(addidasContract, address);
 
   const fetchNftDetailsUsingAirstack = async () => {

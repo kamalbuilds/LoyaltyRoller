@@ -11,8 +11,6 @@ import Container from "../../../components/Container/Container";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
 import {
-  activeChain,
-  addidas,
   getaddresses,
   TWApiKey,
 } from "../../../const/constants";
@@ -25,6 +23,8 @@ import Link from "next/link";
 import ChainContext from "../../../context/chainselect";
 import { useContext } from "react";
 import { Button } from "@chakra-ui/react";
+import { addidas } from "../../../const/constants";
+import { activeChain } from "../../../const/constants";
 
 type Props = {
   nft: NFT;
@@ -34,7 +34,7 @@ type Props = {
 export default function TokenPage({ nft, contractMetadata }: Props) {
   const { selectedChain } = useContext(ChainContext);
   const activeChain = selectedChain;
-  const addidasaddres = getaddresses[activeChain.chainId]?.addidas;
+  const addidasaddres = addidas;
   const loyaltyaddres = getaddresses[activeChain.chainId]?.loyaltyCardAddress;
   const [smartWalletAddress, setSmartWalletAddress] = useState<string | null>(
     null
@@ -116,14 +116,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             {smartWalletAddress ? (
               <>
               <SmartWalletConnected signer={signer} scaaddress={smartWalletAddress} />
-              <Link href={`/u/${smartWalletAddress}`}>
-                  <Button
-                    className='p-4 m-2 hover:cursor-pointer border-purple-800'
-                    bgColor="blue"
-                  >
-                    Go to your Smart Account
-                </Button>
-              </Link>
               </>
             ) : (
               <div className={styles.btnContainer}>
