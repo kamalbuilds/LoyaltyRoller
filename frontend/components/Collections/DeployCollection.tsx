@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Container from '../../components/Container/Container';
 import React, { useEffect, useState } from 'react';
 import { Input } from "../../components/ui/input"
@@ -64,7 +65,7 @@ const DeployCollection = () => {
                 'x-api-key': '45a5afb2-e232-4b78-aa2a-f436f9d36129'
             },
             body: JSON.stringify({
-                chainId: 2125031,
+                chainId: 919,
                 name: object.name,
                 symbol: object.symbol,
                 type: 'ERC721',

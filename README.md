@@ -1,4 +1,4 @@
-# LoyaltyRoller - Increasing Customer Engagements with L3 Rollups, NFTs with OwlProtocol and zapier Integration.
+# LoyaltyRoller - Increasing Customer Engagements with L3 Rollups, NFTs with OwlProtocol Stripe and zapier Integration
 
 ## Introduction
 LoyaltyRoller is an innovative platform that combines the power of blockchain technology and non-fungible tokens (NFTs) to revolutionize customer engagement for brands. By leveraging the unique features of NFTs and smart contracts, LoyaltyRoller offers a seamless and secure way for brands to reward their loyal customers while creating a more engaging and interactive shopping experience.
@@ -13,10 +13,18 @@ LoyaltyRoller is an innovative platform that combines the power of blockchain te
 With the help of ERC-1155 and TokenBoundAccounts.
 4. Brands can utilize all these onchain interactions to conduct automated raffels for the users using owlprotocol and Zapier.
 
+## Contract Addresses
+
+ERC6551Registry - 0x301Ab38c7f652FA23C7Ba1fa182E36665Dac0fC2
+
+ERC6551Account - 0x5cD41A1F206912d068bd153D9f1D8dF63c8667E7
+
 ## Key Features
 
 ### 1. Claim Brand NFTs
 Customers can scan a QR code at the registeration table in a physical store to claim a brand NFT. This NFT serves as a digital loyalty token, containing valuable points that can be redeemed for rewards or used for future purchases.
+
+![image](https://github.com/kamalbuilds/LoyaltyRoller/assets/95926324/b3e752d3-7c7e-4377-8141-d0b26e329058)
 
 ### 2. Purchase Products with Brand NFTs
 Each product in the store has a unique QR code. By scanning this code, customers can claim the product's NFT and purchase it using their brand NFT. This process is made possible through the integration of ERC-1155 tokens and TokenBoundAccounts, ensuring a seamless and secure transaction.

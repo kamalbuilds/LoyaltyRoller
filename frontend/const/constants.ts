@@ -27,13 +27,5 @@ export const activeChain : Chain = {
   };
 
 export const getaddresses: Record<number, Record<string, string>> = {
-    // layer3 addresses needed here -> 
-    80001: {
-        loyaltyCardAddress: '',
-        addidas: '',
-        tokenAddress: '',
-        factoryAddress: '',
-        implementation: '',
-    },
 };
 

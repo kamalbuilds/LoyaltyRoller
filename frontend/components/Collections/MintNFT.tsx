@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Container from '../../components/Container/Container';
 import React, { useEffect, useState } from 'react';
 import { Input } from "../../components/ui/input"
