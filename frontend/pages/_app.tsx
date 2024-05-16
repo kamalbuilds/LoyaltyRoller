@@ -24,8 +24,8 @@ import ChainContext from "../context/chainselect";
 function MyApp({ Component, pageProps }: AppProps) {
 
   const customChain = {
-    chainId: 60385, // Chain ID of the network
-    rpc: ["https://rpc-useful-aquamarine-rhinoceros-dufw1ydgcn.t.conduit.xyz"],
+    chainId: 1729,
+    rpc: ["https://rpc-loyalty-roller-roqlic24du.t.conduit.xyz"],
    
     nativeCurrency: {
       decimals: 18,

@@ -166,12 +166,7 @@ const Swap = () => {
                 console.error("Error in checking the allowance:", error);
             });
         }
-    const handleSwap = async () => {
-        console.log("address", address, signer, activeChain);
 
-        const res = swap(swapParams);
-        console.log("Response", res);
-    }
       
     return (
         <div className='p-4 gap-4'>
@@ -182,13 +177,6 @@ const Swap = () => {
                 bgColor="orange"
             >
                 Check Allowance
-            </Button>
-            <Button
-                onClick={handleSwap}
-                className='p-4 m-2 hover:cursor-pointer border-purple-800'
-                bgColor="green"
-            >
-                Perform 1inch Swap
             </Button>
     </div>
     );

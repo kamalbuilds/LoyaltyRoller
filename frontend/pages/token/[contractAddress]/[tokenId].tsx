@@ -61,15 +61,15 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
         const isDeployed = await smartWallet.isDeployed();
         console.log("Is Deployed? ???", isDeployed);
 
-        if (!isDeployed) {
-          console.log("Smart Account is deploying >>>>>>.....");
-          try {
-            const tx = await smartWallet.deploy();
-            console.log("Smart Account is deploying.....", tx);
-          } catch (error) {
-            console.log("Error in deploying", error)
-          }
-        }
+        // if (!isDeployed) {
+        //   console.log("Smart Account is deploying >>>>>>.....");
+        //   try {
+        //     const tx = await smartWallet.deploy();
+        //     console.log("Smart Account is deploying.....", tx);
+        //   } catch (error) {
+        //     console.log("Error in deploying", error)
+        //   }
+        // }
 
         const smartWalletSigner = await smartWallet.getSigner();
         console.log("Smart wallet signer", smartWalletSigner);
